@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+    <title>Trains List</title>
+   
+    <link rel="stylesheet" crossorigin="anonymous"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" >
+   
+    <script crossorigin="anonymous"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" >
+    </script>
+ 
+</head>
+
+<body style="background-color: lightblue;">
+    <div style="background-color:navy;">
+    <center>
+        <h2 style="color: white;">Trains List</h2>
+    </center>
+   <h4 style=" text-align: right;"> <a class="btn-btn-default" style="color:whitesmoke" href="/search_num">Search Num</a></h4>
+   <br>
+    </div>
+    <!--<a class="btn btn-primary" href="addcar">Add New Car</a>-->
+    <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">Train Num</th>
+            <th scope="col">Train Name</th>
+            <th scope="col">From Station</th>
+            <th scope="col">To station</th>
+            <th scope="col">Available seats </th>
+            <th scope="col">Book Now</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for train in trains %}
+                <tr>
+                    <td>{{ train.TR_NO }}</th>
+                    <td>{{ train.TR_NAME }}</td>
+                    <td>{{ train.FROM_STN }}</td>
+                    <td>{{ train.TO_STN }}</td>
+                    <td>{{ train.SEATS }}</td>
+                    <td><a  href="/reservation_form">Book Now</a></td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</body>
+</html>

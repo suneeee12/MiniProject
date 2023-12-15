@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+    <title>find trains</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">           
+
+    <link rel="stylesheet" crossorigin="anonymous"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" >
+   
+    <script crossorigin="anonymous"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" >
+    </script>
+    <style>
+      .bg {
+          background-image: url("{{ url_for('static', filename='uploads/toplogo.png') }}");
+          height: 100%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        </style>
+ 
+</head>
+ 
+<body>
+  <div class="bg">
+
+  <br><br><br>
+  <div align="center">
+      <div  class="border">
+         <div class="header">
+          <h5 class="word">Search Train by Num</h5>
+         </div>
+    <br><br>
+    <form action="" method = "POST">
+         
+      
+    <div align="left">
+        <label for="TR_NO">Enter Num</label>
+        <input type="text" class="form-control" name="TR_NO" id="TR_NO" value="{{train.TR_NO}}">
+    </div>
+      <br>
+    <button type="btnAdd" class="btn btn-primary">Submit</button>
+  </form>
+  <br>
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br><br>
+    </div>
+</body>
+</html>

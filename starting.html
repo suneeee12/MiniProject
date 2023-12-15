@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            welcome
+        </title>
+        <title>Bootstrap Example</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    .bg {
+        background-image: url("{{ url_for('static', filename='uploads/start.png') }}");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      </style>
+    </head>
+    <body>
+        <div class="bg">
+        
+        <div align="right">
+         <div style="color: aliceblue;"><marquee><center><h1 style="background-color: navy;">Welcome to Online Railways Ticket Reservation</h1></center></marquee>
+            </div>
+
+         <a class="btn btn-default" href="/login">login</a>
+         <a class="btn btn-default" href="/register">register</a>
+         <a class="btn btn-default" href="/">help?</a>
+        </div>
+
+    </div>
+</div>
+    </body>
+</html>

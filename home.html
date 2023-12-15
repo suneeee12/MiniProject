@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>
+             Welcome to home page
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
+
+        <style>
+        .bg {
+            background-image: url("{{ url_for('static', filename='uploads/start.png') }}");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+          h1{
+            align-content: center;
+          }
+        
+
+          </style>
+    </head>
+    <body>
+        <div class="bg"> kkl
+        
+        <div class="container" align="right">
+
+        <!--<a class="btn btn-default" href="/home">Home</a>-->
+        <a class="btn btn-default" href="/view_trains">View trains</a>
+        <a class="btn btn-default" href="/find_train">Find train</a>
+        <a class="btn btn-default" href="/booking_hist">Trains Booking History</a>
+        <a class="btn btn-default" href="/">logout</a>
+
+        <a class="btn btn-default" href="/profile"><i style='font-size:20px' class='fas'>&#xf406;</i></a>
+
+      </div>
+      <br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br>
+        <marquee><center><h1 style="color: black; background-color: rgb(237, 237, 133);">Welcome to Online Railway Ticket Reservation.......</h1></marquee></center>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+    <title>Bookings</title>
+   
+    <link rel="stylesheet" crossorigin="anonymous"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" >
+   
+    <script crossorigin="anonymous"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" >
+    </script>
+ 
+</head>
+
+<body style="background-color: lightblue;">
+    <div style="background-color:navy;">
+    <center>
+        <h2 style="color: white;">Bookings history</h2>
+    </center>
+   <h4 style=" text-align: right;"> <a class="btn-btn-default" style="color:whitesmoke" href="/home">Home</a></h4>
+   <br>
+    </div>
+    <!--<a class="btn btn-primary" href="addcar">Add New Car</a>-->
+    <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">Name</th>
+            <th scope="col">From Station</th>
+            <th scope="col">To station</th>
+            <th scope="col">Phone </th>
+            <th scope="col">Date</th>
+            <th scope="col">paid amount</th>
+            <th scope="col">cancel</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for train in trains %}
+                <tr>
+                    <td>{{ train.First_name}}</th>
+                    <td>{{ train.From_station }}</td>
+                    <td>{{ train.To_station }}</td>
+                    <td>{{ train.Phone_Number }}</td>
+                    <td>{{train.dateofjourney}}</td>
+                    <td>{{train.paidamount}}</td>
+                    <td><a  href="/cancel">cancel</a></td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</body>
+</html>

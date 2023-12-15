@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+    <title>User Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">           
+
+    <link rel="stylesheet" crossorigin="anonymous"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" >
+   
+    <script crossorigin="anonymous"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" >
+    </script>
+
+    <style>
+    .bg {
+        background-image: url("{{ url_for('static', filename='uploads/toplogo.png') }}");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      </style>
+ 
+</head>
+ 
+<body>
+    <div class="bg">
+
+    <br><br><br>
+    <div align="center">
+        <div  class="border">
+           <div class="header">
+            <h5 class="word">User Registration</h5>
+
+           </div>
+
+    <form action="" method = "POST" class="center">
+            <div align="left">
+            
+            <label for="id">Id</label>
+            <input type="text" class="form-control" name="id" id="id" value="{{car.id}}">
+            </div>
+            <div align="left">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name="name" id="name" value="{{car.name}}">
+            </div>
+            <div align="left">
+                <label for="password">password</label>
+                <input type="text" class="form-control" name="password" id="password" value="{{car.password}}">
+            </div>
+            <div align="left">
+                <label for="email">email</label>
+                <input type="text" class="form-control" name="email" id="email" value="{{car.email}}">
+            </div>
+            <br>
+            <button type="btnAdd" class="btn btn-primary">Submit</button>
+            <a href="/" class="btn btn-primary">Cancel</a>
+      </form>
+    </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+    </div>
+</body>
+</html>

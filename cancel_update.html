@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+    <title>find trains</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">           
+
+    <link rel="stylesheet" crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" >
+   
+    <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" > </script>
+
+    <script>
+      function myFunction() {
+        const x = document.createElement("INPUT");
+        x.setAttribute("type", "date");
+        x.setAttribute("value", "2014-02-09");
+        document.body.appendChild(x);
+      }
+      </script>
+    <style>
+    .bg {
+      background-image: url("{{ url_for('static', filename='uploads/toplogo.png') }}");
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+</head>
+ 
+<body>
+  
+  <div class="bg"><br><br>
+
+  <div align="center">
+    <div  class="border">
+      <div class="header"><h5 class="word">Canceling the ticket</h5></div>
+        <form action="" method = "POST" class="needs-validation" novalidate>
+            <br>
+            <div align="left">
+              <label for="First_name">First Name</label>
+              <input type="text" class="form-control" name="First_name" id="First_name" value="{{train.First_name}}" required>
+              <div class="invalid-feedback">Please Enter your First Name</div>
+            </div>
+            
+        
+            <div align="left">
+              <label for="Phone_Number">Phone Number</label>
+              <input type="tel" class="form-control" name="Phone_Number" id="Phone_Number"  pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="xxx-xxx-xxxx" value="{{train.Phone_Number}}" required>
+              <div class="invalid-feedback">Please Enter Valid Phone Number</div>
+
+            </div>
+            
+            
+            <br>
+            <button type="btnAdd" class="btn btn-primary">Cancel</button>
+        </form>
+        <br>
+    </div>
+  </div>
+<br><br><br><br><br><br><br><br><br></div>
+
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+</script>
+</body>
+</html>
